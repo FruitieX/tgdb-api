@@ -35,7 +35,7 @@ var requestWrapper = function (method, param, args, cb) {
   request(requestString, function(err, response, body) {
     if (!err) {
       if (response.statusCode == 200) {
-        parseString(body, function(err, res) {
+        parseString(body, {explicitArray: false}, function(err, res) {
           if (err || !res) {
             cb(err, {});
           } else {

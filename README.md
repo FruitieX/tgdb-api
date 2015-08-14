@@ -37,6 +37,9 @@ Usage
     gamesdb.Updates({time:number}, cb);                 // Get JSON object describing updates to gamesdb since timestamp
     gamesdb.GetPlatformList(undefined, cb);             // Get the list of all platforms on gamesdb.
 
+    // NOTE: be careful with methods returning a list,
+    // if there's only one result it won't be in an array.
+    // TODO: this could be improved!
 
 Example
 -------
